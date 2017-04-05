@@ -7,7 +7,7 @@ function preload() {
     game.load.image('sky', 'assets/sky.png');
     game.load.image('ground', 'assets/platform.png');
     game.load.image('star', 'assets/star.png');
-    game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
+    game.load.spritesheet('dude', 'assets/fox.png', 80, 160);
 
 }
 
@@ -44,13 +44,10 @@ function create() {
     ledge = platforms.create(-150, 250, 'ground');
     ledge.body.immovable = true;
     
-    ledge = platforms.create(400, 125, 'ground');
-    ledge.body.immovable = true;
+ 
 
-    ledge = platforms.create(125, 400, 'ground');
-    ledge.body.immovable = true;
    
-    player = game.add.sprite(32, game.world.height - 150, 'dude');
+    player = game.add.sprite(32, 125, 'dude');
 
     
     game.physics.arcade.enable(player);
