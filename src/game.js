@@ -8,16 +8,16 @@ function preload() {
     var width;
     var height;
     
-    var spriteWidth = 1024;
+    var spriteWidth = 1000;
     
-    width = spriteWidth / 9;
+    width = spriteWidth / 4;
     
     
 
     game.load.image('sky', 'assets/sky.png');
     game.load.image('ground', 'assets/platform.png');
     game.load.image('star', 'assets/star.png');
-    game.load.spritesheet('dude', 'assets/fox.png', width, 135);
+    game.load.spritesheet('dude', 'assets/fox.png', width, 125);
     
     console.log(width);
 
@@ -70,8 +70,8 @@ function create() {
     player.body.collideWorldBounds = true;
 
 
-    player.animations.add('right', [0, 1, 2, 3], 10, true);
-    player.animations.add('left', [5, 6, 7, 8], 10, true);
+    player.animations.add('right', [0, 1], 10, true);
+    player.animations.add('left', [2,3], 10, true);
 
    
     stars = game.add.group();
