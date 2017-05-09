@@ -12,14 +12,14 @@ function preload() {
     
     width = spriteWidth / 4;
     
-    
+    height = 125;
 
     game.load.image('sky', 'assets/sky.png');
     game.load.image('ground', 'assets/platform.png');
     game.load.image('star', 'assets/star.png');
-    game.load.spritesheet('dude', 'assets/fox.png', width, 125);
+    game.load.spritesheet('dude', 'assets/fox.png', width, height);
     
-    console.log(width);
+
 
 }
 
@@ -70,8 +70,8 @@ function create() {
     player.body.collideWorldBounds = true;
 
 
-    player.animations.add('right', [0, 1], 10, true);
-    player.animations.add('left', [2,3], 10, true);
+    player.animations.add('right', [0, 1, 3,4], 10, true);
+    player.animations.add('left', [4, 5, 6, 7], 10, true);
 
    
     stars = game.add.group();
