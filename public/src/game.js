@@ -1,27 +1,8 @@
 /* global Phaser */
 /* global update */
 'use strict';
-var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
-
-function preload() {
-    
-    var width;
-    var height;
-    
-    var spriteWidth = 1000;
-    
-    width = spriteWidth / 4;
-    
-    height = 125;
-
-    game.load.image('sky', 'assets/sky.png');
-    game.load.image('ground', 'assets/platform.png');
-    game.load.image('star', 'assets/star.png');
-    game.load.spritesheet('dude', 'assets/fox.png', width, height);
-    
-
-
-}
+var unitGame = new Unit(125);
+var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: unitGame.Preload, create: create, update: update });
 
 var player;
 var platforms;
@@ -31,6 +12,26 @@ var stars;
 var score = 0;
 var scoreText;
 
+
+function Unit(height) {
+    
+    this.spriteWidth = 1000;
+    this.height = height;
+    this.width = this.spriteWidth / 4;
+}
+
+
+
+unitGame.Preload = function() {}
+
+unitGame.Preload.prototype = function() {
+    var assetsPath = "../assets/";
+    
+    game.load.image('sky', assetsPath + 'sky.png');
+    game.load.image('ground', assetsPath + 'platform.png');
+    game.load.image('star', assetsPath + 'star.png');
+    game.load.spritesheet('dude', assetsPath + 'fox.png', this.width, this.height);
+}
 
 
 function create() {
