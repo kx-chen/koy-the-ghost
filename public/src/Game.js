@@ -8,7 +8,9 @@ unitGame.Game.prototype = {
 
     create: function() {
 
-    this.scoreText = this.game.add.text(16, 16, 'Score: 0', { fontSize: '32px', fill: '#000' });
+    this.score = 0;
+
+   
     
     this.game.physics.startSystem(Phaser.Physics.ARCADE);
 
@@ -44,13 +46,13 @@ unitGame.Game.prototype = {
     this.player.body.collideWorldBounds = true;
 
 
-    this.player.animations.add('right', [0, 1, 3,4], 10, true);
-    this.player.animations.add('left', [4, 5, 6, 7], 10, true);
+    this.player.animations.add('left', [0, 1, 3], 9, true);
+    this.player.animations.add('right', [5, 6, 7, 8, 9], 9, true);
 
    
     this.stars = this.game.add.group();
 
-
+    this.scoreText = this.game.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
     this.stars.enableBody = true;
 
 
@@ -74,12 +76,13 @@ unitGame.Game.prototype = {
 
 
     update: function() {
+
     this.game.physics.arcade.collide(this.player, this.platforms);
     this.game.physics.arcade.collide(this.stars, this.platforms);
     
     
    
-    this.game.physics.arcade.overlap(this.player, this.stars, this.collectStar, null, null);
+    this.game.physics.arcade.overlap(this.player, this.stars, this.collectStar, null, this);
 
 
     this.player.body.velocity.x = 0;
@@ -126,10 +129,13 @@ unitGame.Game.prototype = {
     star.kill();
 
     this.score += 10;
+
+    console.log(this.score);
+
+
     this.scoreText.text = 'Score: ' + this.score;
 
-    console.log(scoreText);
-
+    
     
     }
     
