@@ -78,50 +78,58 @@ unitGame.Game.prototype = {
     update: function() {
 
 
-    this.game.physics.arcade.collide(this.player, this.platforms);
-    this.game.physics.arcade.collide(this.stars, this.platforms);
-    
-    this.player.body.velocity.x = 300;
-    
-   
-    this.game.physics.arcade.overlap(this.player, this.stars, this.collectStar, null, this);
+        this.game.physics.arcade.collide(this.player, this.platforms);
+        this.game.physics.arcade.collide(this.stars, this.platforms);
+        
+        this.player.body.velocity.x = 300;
+        
+       
+        this.game.physics.arcade.overlap(this.player, this.stars, this.collectStar, null, this);
 
 
-  
-
-    if (this.cursors.left.isDown)
-    {
       
-        this.player.body.velocity.x = -150;
 
-        this.player.animations.play('left'); 
+        if (this.cursors.left.isDown)
+        {
+          
+            this.player.body.velocity.x = -150;
+
+            this.player.animations.play('left'); 
+            
+           
+            
+           
+        }
+        else if (this.cursors.right.isDown)
+        {
+
+            this.player.body.velocity.x = 150;
+
+            this.player.animations.play('right');
+            
+             
+        }
+        else
+        {
+
+           this.player.frame = 4;
+        }
         
+
+        if (this.cursors.up.isDown && this.player.body.touching.down) {
+            this.player.body.velocity.y = -350;
+        }
+
        
-        
-       
-    }
-    else if (this.cursors.right.isDown)
-    {
-
-        this.player.body.velocity.x = 150;
-
-        this.player.animations.play('right');
-        
-         
-    }
-    else
-    {
-
-       this.player.frame = 4;
-    }
-    
-
-    if (this.cursors.up.isDown && this.player.body.touching.down)
-    {
-        this.player.body.velocity.y = -350;
-    }
+        if (this.score > 120) {
+            this.game.destroy();
+        }
 
     },
+
+    // Finish the game once you've collected all stars
+
+    
 
 
     collectStar: function(player, star) {
