@@ -14,13 +14,16 @@ unitGame.Game.prototype = {
     
     this.game.physics.startSystem(Phaser.Physics.ARCADE);
 
+    // Sky
+    this.sky = this.game.add.sprite(0, 0, 'sky');
+    // this.sky.height = 800;
+    // this.sky.width = 600;
 
-    this.game.add.sprite(0, 0, 'sky');
-
-
+    // Platform
     this.platforms = this.game.add.group();
     this.platforms.enableBody = true;
 
+    // Ground
     this.ground = this.platforms.create(0, this.game.world.height - 64, 'ground');
     this.ground.scale.setTo(2, 2);
     this.ground.body.immovable = true;
@@ -34,7 +37,7 @@ unitGame.Game.prototype = {
     
  
 
-   
+   // Adds in player
     this.player = this.game.add.sprite(32, 125, 'dude');
 
     

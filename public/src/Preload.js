@@ -11,7 +11,7 @@ unitGame.Preload.prototype = {
 
     var assetsPath = "../assets/";
     
-    this.game.load.image('sky', assetsPath + 'sky.png');
+    this.game.load.image('sky', assetsPath + 'background.png');
     this.game.load.image('ground', assetsPath + 'platform.png');
     this.game.load.image('star', assetsPath + 'star.png');
     
