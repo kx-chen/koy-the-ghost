@@ -77,15 +77,17 @@ unitGame.Game.prototype = {
 
     update: function() {
 
+
     this.game.physics.arcade.collide(this.player, this.platforms);
     this.game.physics.arcade.collide(this.stars, this.platforms);
     
+    this.player.body.velocity.x = 300;
     
    
     this.game.physics.arcade.overlap(this.player, this.stars, this.collectStar, null, this);
 
 
-    this.player.body.velocity.x = 0;
+  
 
     if (this.cursors.left.isDown)
     {
