@@ -1,6 +1,6 @@
 var unitGame = unitGame || {};
 
-unitGame.Game = function(){}
+unitGame.Game = function(){};
 
 
 

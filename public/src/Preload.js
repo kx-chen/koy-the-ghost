@@ -1,6 +1,6 @@
 var unitGame = unitGame || {};
 
-unitGame.Preload = function() {}
+unitGame.Preload = function() {};
 
 unitGame.Preload.prototype = {
 
