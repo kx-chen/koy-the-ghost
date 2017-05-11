@@ -9,6 +9,13 @@ unitGame.Boot.prototype = {
 
   },
   create: function() {
+  	 //scaling options
+    this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+    
+    //have the game centered horizontally
+    this.scale.pageAlignHorizontally = true;
+    this.scale.pageAlignVertically = true;
+ 
 
   
     this.state.start('Preload');
