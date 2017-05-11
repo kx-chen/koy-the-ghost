@@ -1,3 +1,5 @@
+// Preloads assets 
+
 var unitGame = unitGame || {};
 
 unitGame.Preload = function() {};
@@ -12,7 +14,14 @@ unitGame.Preload.prototype = {
     this.game.load.image('sky', assetsPath + 'sky.png');
     this.game.load.image('ground', assetsPath + 'platform.png');
     this.game.load.image('star', assetsPath + 'star.png');
-    this.game.load.spritesheet('dude', assetsPath + 'dude.png', 32, 48);
+    
+    
+    var spriteWidth = 2560;
+    var width = spriteWidth / 10;
+    
+    var height = 128;
+    
+    this.game.load.spritesheet('dude', assetsPath + 'ghost.png', width, height);
 
 
 

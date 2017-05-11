@@ -46,8 +46,9 @@ unitGame.Game.prototype = {
     this.player.body.collideWorldBounds = true;
 
 
-    this.player.animations.add('left', [0, 1, 3], 9, true);
-    this.player.animations.add('right', [5, 6, 7, 8, 9], 9, true);
+    
+    this.player.animations.add('right', [0, 1, 3], 10, true);
+    this.player.animations.add('left', [5, 6, 7, 8, 9], 10, true);
 
    
     this.stars = this.game.add.group();
@@ -120,18 +121,11 @@ unitGame.Game.prototype = {
             this.player.body.velocity.y = -350;
         }
 
-       
-        if (this.score > 120) {
-            this.game.destroy();
-        }
+
 
     },
 
-    // Finish the game once you've collected all stars
-
     
-
-
     collectStar: function(player, star) {
 
     
