@@ -42,11 +42,22 @@ unitGame.Game.prototype = {
     this.player.body.bounce.y = 0.2;
     this.player.body.gravity.y = 300;
     this.player.body.collideWorldBounds = true;
-
+    
+        
+    this.player.animations.add('right', [0, 1, 2, 3, 4, 5, 6], 7, true);
+    this.player.animations.add('left', [8, 9, 10, 11, 12, 13, 14], 7, true);
+    
 
     
-    this.player.animations.add('right', [0, 1, 3], 10, true);
-    this.player.animations.add('left', [5, 6, 7, 8, 9], 10, true);
+    this.enemy = this.game.add.sprite(32, 125, "enemy");
+    
+    this.enemy.animations.add("right", )
+    this.enemy.animations.add("left", )
+    
+    
+    
+
+
 
    
     this.stars = this.game.add.group();
