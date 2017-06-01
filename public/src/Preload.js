@@ -30,6 +30,9 @@ unitGame.Preload.prototype = {
 	create: function() {
 
     	this.state.start('Game');
+       
+        
+        this.game.physics.startSystem(Phaser.Physics.ARCADE);
 	}
 
 

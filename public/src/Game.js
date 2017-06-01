@@ -7,43 +7,37 @@ unitGame.Game = function(){};
 unitGame.Game.prototype = {
 
     create: function() {
-
-    this.score = 0;
-
-   
     
-    this.game.physics.startSystem(Phaser.Physics.ARCADE);
-
-    // platforms.js
-    this.createPlatforms();
+        this.score = 0;
     
-    // sprites.js
-    this.addSprites();
+        
+    
+        // sprites.js
+        this.addSprites();
+        
+        // platforms.js
+        this.createPlatforms();
+
+        this.stars = this.game.add.group();
+    
+        this.scoreText = this.game.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+        this.stars.enableBody = true;
     
     
+        for (var i = 0; i < 12; i++)
+        {
+           
+            this.star = this.stars.create(i * 70, 0, 'star');
     
-    this.stars = this.game.add.group();
+            this.star.body.gravity.y = 300;
+    
+          
+            this.star.body.bounce.y = 0.7 + Math.random() * 0.2;
+        }
 
-    this.scoreText = this.game.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
-    this.stars.enableBody = true;
-
-
-    for (var i = 0; i < 12; i++)
-    {
-       
-        this.star = this.stars.create(i * 70, 0, 'star');
-
-        this.star.body.gravity.y = 300;
-
+    
       
-        this.star.body.bounce.y = 0.7 + Math.random() * 0.2;
-    }
-
-
-    
-
-  
-    this.cursors = this.game.input.keyboard.createCursorKeys();
+        this.cursors = this.game.input.keyboard.createCursorKeys();
     },
 
 
@@ -54,12 +48,18 @@ unitGame.Game.prototype = {
         this.game.physics.arcade.collide(this.stars, this.platforms);
         
         this.game.physics.arcade.collide(this.enemy, this.platforms);
-
         
-        this.player.body.velocity.x = 300;
+        
+        this.camera.setBoundsToWorld();
+        this.camera.follow(this.player);
+        
+    
+        
+         this.player.body.velocity.x = 300;
         
        
         this.game.physics.arcade.overlap(this.player, this.stars, this.collectStar, null, this);
+        this.game.physics.arcade.overlap(this.enemy, this.player, this.enemyCollide, null, this);
 
 
       
@@ -86,8 +86,9 @@ unitGame.Game.prototype = {
         }
         else
         {
-
-           this.player.frame = 4;
+    
+            this.player.frame = 7;
+            // this.player.body.velocity.x = 0;
         }
         
 
@@ -103,17 +104,17 @@ unitGame.Game.prototype = {
     collectStar: function(player, star) {
 
     
-  
-    star.kill();
-
-    this.score += 10;
-
-    console.log(this.score);
-
-
-    this.scoreText.text = 'Score: ' + this.score;
-
+      
+        star.kill();
     
+        this.score += 10;
+    
+        console.log(this.score);
+    
+    
+        this.scoreText.text = 'Score: ' + this.score;
+    
+        
     
     }
     
