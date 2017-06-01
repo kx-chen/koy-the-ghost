@@ -14,52 +14,14 @@ unitGame.Game.prototype = {
     
     this.game.physics.startSystem(Phaser.Physics.ARCADE);
 
-    // Sky
-    this.sky = this.game.add.sprite(0, 0, 'sky');
-
-
-    // Platform
-    this.platforms = this.game.add.group();
-    this.platforms.enableBody = true;
-
-    // Ground
-    this.ground = this.platforms.create(0, this.game.world.height - 64, 'ground');
-    this.ground.scale.setTo(4, 4);
-    this.ground.body.immovable = true;
-    
-    
+    // platforms.js
     this.createPlatforms();
     
-    
-   // Adds in player
-    this.player = this.game.add.sprite(32, 125, 'dude');
-    // this.player.scale.setTo(4,4);
-
-    
-    this.game.physics.arcade.enable(this.player);
-
-
-    this.player.body.bounce.y = 0.2;
-    this.player.body.gravity.y = 300;
-    this.player.body.collideWorldBounds = true;
-    
-        
-    this.player.animations.add('right', [0, 1, 2, 3, 4, 5, 6], 7, true);
-    this.player.animations.add('left', [8, 9, 10, 11, 12, 13, 14], 7, true);
-    
-
-    
-    this.enemy = this.game.add.sprite(32, 125, "enemy");
-    
-    this.enemy.animations.add("right", )
-    this.enemy.animations.add("left", )
+    // sprites.js
+    this.addSprites();
     
     
     
-
-
-
-   
     this.stars = this.game.add.group();
 
     this.scoreText = this.game.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
@@ -90,6 +52,9 @@ unitGame.Game.prototype = {
 
         this.game.physics.arcade.collide(this.player, this.platforms);
         this.game.physics.arcade.collide(this.stars, this.platforms);
+        
+        this.game.physics.arcade.collide(this.enemy, this.platforms);
+
         
         this.player.body.velocity.x = 300;
         
