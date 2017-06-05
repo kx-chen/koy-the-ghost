@@ -13,16 +13,13 @@ unitGame.Game.prototype = {
        
         
         this.score = 0;
-    
-        
-         
+
         // sprites.js
         this.addSprites();
         
-
-        
         // platforms.js
         this.createPlatforms();
+        
         this.stars = this.game.add.group();
     
         this.scoreText = this.game.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#fff' });
@@ -30,7 +27,7 @@ unitGame.Game.prototype = {
         this.stars.enableBody = true;
     
     
-        for (var i = 0; i < 12; i++)
+        for (var i = 0; i < 1200; i++)
         {
            
             this.star = this.stars.create(i * 70, 0, 'star');
