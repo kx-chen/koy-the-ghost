@@ -8,16 +8,22 @@ unitGame.Game.prototype = {
 
     create: function() {
     
+        this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+        this.game.scale.updateLayout(true);
+        
         this.score = 0;
     
         
-    
+         
         // sprites.js
         this.addSprites();
         
         // platforms.js
         this.createPlatforms();
 
+        
+        
+// https://www.joshmorony.com/how-to-create-an-infinite-climbing-game-in-phaser/
         this.stars = this.game.add.group();
     
         this.scoreText = this.game.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
@@ -49,12 +55,7 @@ unitGame.Game.prototype = {
         
         this.game.physics.arcade.collide(this.enemy, this.platforms);
         
-        
-        this.camera.setBoundsToWorld();
-        this.camera.follow(this.player);
-        
     
-        
          this.player.body.velocity.x = 300;
         
        
@@ -95,6 +96,9 @@ unitGame.Game.prototype = {
         if (this.cursors.up.isDown && this.player.body.touching.down) {
             this.player.body.velocity.y = -350;
         }
+        
+        this.camera.follow(this.player);
+        this.game.camera.follow(this.player);
 
 
 

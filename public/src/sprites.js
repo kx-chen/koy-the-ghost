@@ -4,8 +4,7 @@ var unitGame = unitGame || {};
 
 unitGame.Game.prototype.addSprites = function() {
     
-     this.sky = this.game.add.sprite(0, 0, 'sky');
-    
+    this.sky = this.game.add.sprite(0, 0, 'sky');
     // Adds in player
     this.player = this.game.add.sprite(32, 125, 'dude');
     // this.player.scale.setTo(4,4);
@@ -17,7 +16,7 @@ unitGame.Game.prototype.addSprites = function() {
 
     this.player.body.bounce.y = 0.2;
     this.player.body.gravity.y = 300;
-    this.player.body.collideWorldBounds = true;
+    this.player.body.collideWorldBounds = false;
     
         
     this.player.animations.add('right', [0, 1, 2, 3, 4, 5, 6], 7, true);

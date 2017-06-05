@@ -23,9 +23,6 @@ unitGame.Game.prototype.createPlatforms = function() {
     this.ledge.body.immovable = true;
     
 
-
-
-
  };
 
 

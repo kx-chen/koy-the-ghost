@@ -9,15 +9,17 @@ unitGame.Boot.prototype = {
 
   },
   create: function() {
-  	 //scaling options
-    this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
     
-    //have the game centered horizontally
-    this.scale.pageAlignHorizontally = true;
-    this.scale.pageAlignVertically = true;
- 
+    this.game.world.setBounds(0, 0, 3500, this.game.height);
+    
+    this.game.scale.pageAlignHorizontally = true;
+    this.game.scale.pageAlignVertically = true;
 
-  
+    this.game.scale.updateLayout(true);
+    
+    
+    this.game.physics.startSystem(Phaser.Physics.ARCADE);
+    
     this.state.start('Preload');
   }
 };
