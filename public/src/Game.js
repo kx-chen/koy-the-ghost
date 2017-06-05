@@ -10,6 +10,7 @@ unitGame.Game.prototype = {
     
         this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
         this.game.scale.updateLayout(true);
+       
         
         this.score = 0;
     
@@ -18,8 +19,12 @@ unitGame.Game.prototype = {
         // sprites.js
         this.addSprites();
         
+
+        
         // platforms.js
         this.createPlatforms();
+        
+
 
         
         
@@ -56,15 +61,13 @@ unitGame.Game.prototype = {
         this.game.physics.arcade.collide(this.enemy, this.platforms);
         
     
-         this.player.body.velocity.x = 300;
-        
-       
         this.game.physics.arcade.overlap(this.player, this.stars, this.collectStar, null, this);
         this.game.physics.arcade.overlap(this.enemy, this.player, this.enemyCollide, null, this);
+        
+        this.player.body.velocity.x = 300;
 
-
-      
-
+        
+        
         if (this.cursors.left.isDown)
         {
           
@@ -82,6 +85,8 @@ unitGame.Game.prototype = {
             this.player.body.velocity.x = 150;
 
             this.player.animations.play('right');
+            this.sky.tilePosition.x -= 3;
+        
             
              
         }
@@ -98,7 +103,7 @@ unitGame.Game.prototype = {
         }
         
         this.camera.follow(this.player);
-        this.game.camera.follow(this.player);
+
 
 
 

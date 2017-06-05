@@ -10,7 +10,7 @@ unitGame.Boot.prototype = {
   },
   create: function() {
     
-    this.game.world.setBounds(0, 0, 3500, this.game.height);
+    this.game.world.setBounds(0, 0, 500000, this.game.height);
     
     this.game.scale.pageAlignHorizontally = true;
     this.game.scale.pageAlignVertically = true;

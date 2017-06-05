@@ -11,7 +11,7 @@ unitGame.Game.prototype.createPlatforms = function() {
     
         // Ground
     this.ground = this.platforms.create(0, this.game.world.height - 64, 'ground');
-    this.ground.scale.setTo(4, 4);
+    this.ground.scale.setTo(40000, 4);
     this.ground.body.immovable = true;
     
     
