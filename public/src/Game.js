@@ -23,12 +23,6 @@ unitGame.Game.prototype = {
         
         // platforms.js
         this.createPlatforms();
-        
-
-
-        
-        
-// https://www.joshmorony.com/how-to-create-an-infinite-climbing-game-in-phaser/
         this.stars = this.game.add.group();
     
         this.scoreText = this.game.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
@@ -65,41 +59,24 @@ unitGame.Game.prototype = {
         this.game.physics.arcade.overlap(this.enemy, this.player, this.enemyCollide, null, this);
         
         this.player.body.velocity.x = 300;
+        this.player.animations.play('right');
 
-        
-        
-        if (this.cursors.left.isDown)
-        {
-          
-            this.player.body.velocity.x = -150;
-
-            this.player.animations.play('left'); 
             
-           
-            
-           
-        }
-        else if (this.cursors.right.isDown)
-        {
+        if (this.cursors.right.isDown) {
 
             this.player.body.velocity.x = 150;
-
-            this.player.animations.play('right');
             this.sky.tilePosition.x -= 3;
         
-            
-             
         }
-        else
-        {
+        else {
     
-            this.player.frame = 7;
+            // this.player.frame = 6;
             // this.player.body.velocity.x = 0;
         }
         
 
         if (this.cursors.up.isDown && this.player.body.touching.down) {
-            this.player.body.velocity.y = -350;
+            this.player.body.velocity.y = -1000;
         }
         
         this.camera.follow(this.player);

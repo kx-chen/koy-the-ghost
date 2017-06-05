@@ -15,8 +15,8 @@ unitGame.Game.prototype.addSprites = function() {
 
 
 
-    this.player.body.bounce.y = 0.2;
-    this.player.body.gravity.y = 300;
+    // this.player.body.bounce.y = 0.2;
+    this.player.body.gravity.y = 1000;
     this.player.body.collideWorldBounds = false;
     
         

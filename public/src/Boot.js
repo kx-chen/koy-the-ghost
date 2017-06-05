@@ -17,9 +17,6 @@ unitGame.Boot.prototype = {
 
     this.game.scale.updateLayout(true);
     
-    
-    this.game.physics.startSystem(Phaser.Physics.ARCADE);
-    
     this.state.start('Preload');
   }
 };
