@@ -6,7 +6,6 @@ unitGame.Preload = function() {};
 
 unitGame.Preload.prototype = {
 
-
     preload: function() {
 
     var assetsPath = "../assets/";
@@ -21,7 +20,7 @@ unitGame.Preload.prototype = {
     
     var height = 128;
     
-    this.game.load.spritesheet('dude', assetsPath + 'ghost.png', 90, 105, 17, 0, 0);
+    this.game.load.spritesheet('dude', assetsPath + 'ghost.png', 56, 56);
     this.game.load.spritesheet('enemy', assetsPath + 'enemy-ghost.png', width, height, 17, 90, 10);
 
 
@@ -30,8 +29,6 @@ unitGame.Preload.prototype = {
 	create: function() {
 
     	this.state.start('Game');
-       
-        
         this.game.physics.startSystem(Phaser.Physics.ARCADE);
 	}
 

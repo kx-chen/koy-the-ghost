@@ -8,7 +8,7 @@ unitGame.Game.prototype.addSprites = function() {
 
     // Adds in player
     this.player = this.game.add.sprite(32, 125, 'dude');
-    // this.player.scale.setTo(4,4);
+    this.player.scale.setTo(2,2);
 
     
     this.game.physics.arcade.enable(this.player);
@@ -20,8 +20,8 @@ unitGame.Game.prototype.addSprites = function() {
     this.player.body.collideWorldBounds = false;
     
         
-    this.player.animations.add('right', [0, 1, 2, 3, 4, 5, 6], 7, true);
-    this.player.animations.add('left', [8, 9, 10, 11, 12, 13, 14], 7, true);
+    this.player.animations.add('right', [0, 1], 2, true);
+    // this.player.animations.add('left', [8, 9, 10, 11, 12, 13, 14], 7, true);
     
 
     

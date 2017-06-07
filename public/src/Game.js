@@ -14,7 +14,7 @@ unitGame.Game.prototype = {
         
         this.score = 0;
 
-        // sprites.js
+        // adds in sprites from the loader
         this.addSprites();
         
         // platforms.js

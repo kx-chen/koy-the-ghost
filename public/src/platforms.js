@@ -9,11 +9,10 @@ unitGame.Game.prototype.createPlatforms = function() {
     this.platforms = this.game.add.group();
     this.platforms.enableBody = true;
     
-        // Ground
+    // Ground
     this.ground = this.platforms.create(0, this.game.world.height - 64, 'ground');
     this.ground.scale.setTo(40000, 4);
     this.ground.body.immovable = true;
-    
     
     
     this.ledge = this.platforms.create(400, 400, 'ground');
