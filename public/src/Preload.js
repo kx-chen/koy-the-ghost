@@ -21,8 +21,8 @@ unitGame.Preload.prototype = {
     
     var height = 128;
     
-    this.game.load.spritesheet('dude', assetsPath + 'ghost.png', width, height);
-    this.game.load.spritesheet('enemy', assetsPath + 'enemy-ghost.png', width, height);
+    this.game.load.spritesheet('dude', assetsPath + 'ghost.png', 90, 105, 17, 0, 0);
+    this.game.load.spritesheet('enemy', assetsPath + 'enemy-ghost.png', width, height, 17, 90, 10);
 
 
 	},

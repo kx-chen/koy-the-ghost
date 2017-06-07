@@ -27,8 +27,7 @@ unitGame.Game.prototype = {
         this.stars.enableBody = true;
     
     
-        for (var i = 0; i < 1200; i++)
-        {
+        for (var i = 0; i < 1200; i++) {
            
             this.star = this.stars.create(i * 70, 0, 'star');
     
@@ -56,7 +55,7 @@ unitGame.Game.prototype = {
         this.game.physics.arcade.overlap(this.player, this.stars, this.collectStar, null, this);
         this.game.physics.arcade.overlap(this.enemy, this.player, this.enemyCollide, null, this);
         
-        this.player.body.velocity.x = 300;
+       
         this.player.animations.play('right');
 
             
@@ -66,18 +65,14 @@ unitGame.Game.prototype = {
             this.sky.tilePosition.x -= 3;
         
         }
-        else {
-    
-            // this.player.frame = 6;
-            // this.player.body.velocity.x = 0;
-        }
-        
-
+       
         if (this.cursors.up.isDown && this.player.body.touching.down) {
             this.player.body.velocity.y = -1000;
         }
         
         this.camera.follow(this.player);
+        
+        this.player.body.velocity.x = 500;
 
 
 
