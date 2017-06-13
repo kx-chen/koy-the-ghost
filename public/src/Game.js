@@ -24,6 +24,7 @@ unitGame.Game.prototype.create = function() {
         // items.js
         this.createItems();
         
+        this.spaceKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
         this.cursors = this.game.input.keyboard.createCursorKeys();
   
 }

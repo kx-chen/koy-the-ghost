@@ -48,9 +48,11 @@ unitGame.Game.prototype.update = function() {
             this.player.body.velocity.y = -500;
         }
         
-        if (this.cursors.down.isDown) {
-            this.player.body.velocity.y = 500;
+        if (this.spaceKey.isDown) {
+            this.player.body.velocity.y = -500;
         }
+        
+
         
         this.camera.follow(this.player);
         
