@@ -10,6 +10,9 @@ enjoy
 ## credits
 
 Plot & Design -- Steven Lo
+
 Music & Plot -- Filse
+
 Animator -- Benjamin-Martinez Pimenta
+
 Programmer -- Kai 
