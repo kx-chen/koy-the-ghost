@@ -16,16 +16,15 @@ unitGame.Game.prototype.create = function() {
         // adds in sprites from the loader
         this.addSprites();
         
-  
-        this.soundtrack2 = this.game.add.audio('soundtrack2');
-        
-        this.soundtrack2.play();
+
         // platforms.js
         this.createPlatforms();
 
         // items.js
         this.createItems();
         
+        
+        this.addMusic();
         
         // Iniates the space key. this.spacekey is referenced later in Update.js
         this.spaceKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
