@@ -4,9 +4,6 @@ unitGame.Game = function() {};
 
 
 unitGame.Game.prototype.create = function() {
-
-    
-    
         this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
         this.game.scale.updateLayout(true);
        

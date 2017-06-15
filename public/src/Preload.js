@@ -9,7 +9,7 @@ unitGame.Preload.prototype = {
     preload: function() {
 
     var assetsPath = "../assets/";
-    
+    // TODO: make all this into seperate functions
     this.game.load.image('sky', assetsPath + 'background.png');
     this.game.load.image('ground', assetsPath + 'platform.png');
     this.game.load.image('star', assetsPath + 'star.png');
@@ -23,7 +23,8 @@ unitGame.Preload.prototype = {
     this.game.load.spritesheet('dude', assetsPath + 'ghost.png', 56, 56);
     this.game.load.spritesheet('enemy', assetsPath + 'enemy-ghost.png', width, height);
     
-    this.game.load.audio('soundtrack2', assetsPath + 'soundtrack-2.wav')
+    this.game.load.audio('soundtrack2', assetsPath + 'soundtrack-2.wav');
+    this.game.load.audio('soundtrack1', assetsPath + 'soundtrack-1.wav');
 
 
 	},
