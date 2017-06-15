@@ -17,7 +17,9 @@ unitGame.Game.prototype.create = function() {
         this.addSprites();
         
   
+        this.soundtrack2 = this.game.add.audio('soundtrack2');
         
+        this.soundtrack2.play();
         // platforms.js
         this.createPlatforms();
 

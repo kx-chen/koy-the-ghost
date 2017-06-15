@@ -22,6 +22,8 @@ unitGame.Preload.prototype = {
     
     this.game.load.spritesheet('dude', assetsPath + 'ghost.png', 56, 56);
     this.game.load.spritesheet('enemy', assetsPath + 'enemy-ghost.png', width, height);
+    
+    this.game.load.audio('soundtrack2', assetsPath + 'soundtrack-2.wav')
 
 
 	},
