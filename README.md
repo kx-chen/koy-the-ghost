@@ -20,11 +20,12 @@ Programmer -- Kai
 
 ## structure
 
-everything game related (assets, code, music) is located in the <code> public </code> directory. you will not find anything of use everywhere else. the code for the game is located in <code> src </code>
+everything game related is in <code> public </code>
 
-Everything else is for the express.js web server that serves up the files. 
+Locations: 
+- Game Code -- <code> public/src </code> directory
+- Assets -- <code> public/assets </code> directory
 
-
-
+everything else is mostly irrelevant to the game itself. 
 
 enjoy
