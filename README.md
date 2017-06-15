@@ -16,3 +16,15 @@ Music & Plot -- Filse
 Animator -- Benjamin-Martinez Pimenta
 
 Programmer -- Kai 
+
+
+## structure
+
+everything game related (assets, code, music) is located in the <code> public </code> directory. you will not find anything of use everywhere else. 
+
+Everything else is for the express.js web server that serves up the files. 
+
+
+
+
+enjoy
