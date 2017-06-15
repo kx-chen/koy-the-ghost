@@ -21,7 +21,7 @@ unitGame.Game.prototype.update = function() {
         
 
         
-        this.game.setBounds();
+        // this.game.setBounds();
         this.player.animations.play('right');
 
             
