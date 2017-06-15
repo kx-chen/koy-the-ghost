@@ -5,3 +5,11 @@ This is a game about a ghost, named Koy who goes on many adventures running forw
 Website coming sooooooooooooooon. For now, check out the game in beta: https://bakon.herokuapp.com
 
 enjoy
+
+
+## credits
+
+Plot & Design -- Steven Lo
+Music & Plot -- Filse
+Animator -- Benjamin-Martinez Pimenta
+Programmer -- Kai 
