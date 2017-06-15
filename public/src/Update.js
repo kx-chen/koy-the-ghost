@@ -13,19 +13,7 @@ unitGame.Game.prototype.update = function() {
         
     
         this.game.physics.arcade.overlap(this.player, this.stars, this.collectStar, null, this);
-        this.game.physics.arcade.overlap(this.player, this.enemies, function() {
-            console.log("play collided with enemy");
-            this.score += -1;
-
-
-            if (this.score >= -1 ) {
-                console.log("score is -1 or less");
-            
-            }
-            // add function to change text
-            this.scoreText.text = 'Score: ' + this.score;
-            
-            }, null, this);
+        this.game.physics.arcade.overlap(this.player, this.enemies, this.enemyCollide, null, this);
         
         
         
