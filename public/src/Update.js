@@ -9,9 +9,6 @@ unitGame.Game.prototype.update = function() {
         this.game.physics.arcade.collide(this.stars, this.platforms);
         
         
-        this.spawnEnemy();
-        
-    
         this.game.physics.arcade.overlap(this.player, this.stars, this.collectStar, null, this);
         this.game.physics.arcade.overlap(this.player, this.enemies, this.enemyCollide, null, this);
         
@@ -24,7 +21,7 @@ unitGame.Game.prototype.update = function() {
         // this.game.setBounds();
         this.player.animations.play('right');
 
-            
+       
         if (this.cursors.right.isDown) {
 
             this.player.body.velocity.x = 150;
