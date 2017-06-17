@@ -43,7 +43,8 @@ unitGame.Game.prototype.update = function() {
         
         this.player.body.velocity.x = 500;
         
-
+        this.score += 0.5;
+        this.scoreText.text = 'Score: ' + Math.round(this.score);
         
 
     }
