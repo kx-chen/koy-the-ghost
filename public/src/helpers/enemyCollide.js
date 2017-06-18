@@ -22,7 +22,7 @@ unitGame.Game.prototype.enemyCollide = function() {
 
 		    this.soundtrack1.stop();
 
-		    this.state.start('Game');
+		    this.state.start('Gameover');
 		}
     }
 }
