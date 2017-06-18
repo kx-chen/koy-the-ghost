@@ -2,7 +2,6 @@ var unitGame = unitGame || {};
 
 unitGame.Game = function() {};
 
-
 unitGame.Game.prototype.create = function() {
         this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
         this.game.scale.updateLayout(true);
@@ -29,8 +28,7 @@ unitGame.Game.prototype.create = function() {
         
         // Instantiates the keyboard
         this.cursors = this.game.input.keyboard.createCursorKeys();
-  
-}
+};
 
    
 
