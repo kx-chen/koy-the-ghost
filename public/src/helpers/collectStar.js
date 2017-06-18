@@ -1,12 +1,12 @@
- 
  var unitGame = unitGame || {};
 
 unitGame.Game.prototype.collectStar = function(player, star){ 
      
         star.kill();
         this.score += 10;
+        this.lives += 1;
     
-        console.log(this.score);
         this.scoreText.text = 'Score: ' + this.score;
+        this.livesText.text = 'Lives: ' + this.lives;
 };
     

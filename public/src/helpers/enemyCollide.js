@@ -4,7 +4,6 @@ unitGame.Game.prototype.enemyCollide = function() {
     console.log("play collided with enemy");
     // Gameover
      if (this.game.time.now > this.timeDelay) {
-
         // wait 1 second
         this.timeDelay = this.game.time.now + 1000;
 
@@ -16,7 +15,6 @@ unitGame.Game.prototype.enemyCollide = function() {
 		    if (this.lives == 0) {
 	
 			    this.soundtrack1.stop();
-	
 			    this.state.start('Gameover');
 			}
     }
