@@ -6,7 +6,7 @@ unitGame.Game.prototype.spawnEnemy = function() {
     this.enemies.enableBody = true;
     // this.game.physics.arcade.enable(this.enemies);
 
-    for (var i = 0; i < 12000; i++) {
+    for (var i = 0; i < 1200; i++) {
        // TODO: randomize enemy spawning
         this.enemy = this.enemies.create(i + Math.random() * 50000, i + Math.random() * 5000, 'enemy');
 

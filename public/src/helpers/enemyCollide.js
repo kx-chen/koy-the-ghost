@@ -5,5 +5,7 @@ unitGame.Game.prototype.enemyCollide = function() {
 
     // TODO: add function to change score text 
     this.scoreText.text = 'Score: ' + this.score;
+
+    this.state.start('Game');
         
 }

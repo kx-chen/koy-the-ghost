@@ -16,9 +16,6 @@ unitGame.Game.prototype.update = function() {
         
         this.game.physics.arcade.collide(this.enemies, this.platforms);
         
-
-        
-        // this.game.setBounds();
         this.player.animations.play('right');
 
        
