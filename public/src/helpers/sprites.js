@@ -24,30 +24,6 @@ unitGame.Game.prototype.addSprites = function() {
     // this.player.animations.add('left', [8, 9, 10, 11, 12, 13, 14], 7, true);
     
     
-    
-  
-
-        
-    this.enemies = this.game.add.group();
-    this.enemies.enableBody = true;
-    // this.game.physics.arcade.enable(this.enemies);
-    
-    
-    for (var i = 0; i < 1200; i++) {
-       // TODO: randomize enemy spawning
-        this.enemy = this.enemies.create(i * 70, 1000, 'enemy');
-
-        this.enemy.body.gravity.y = 300;
-
-      
-        this.enemy.body.bounce.y = 1 + Math.random() * 0.85654;
-    }
-
-    
-    
-
-    
-    
-};
+    };
 
 
