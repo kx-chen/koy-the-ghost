@@ -10,14 +10,14 @@ unitGame.Gameover.prototype = {
 	},
 
 	create: function() {
-		this.gameOverText = this.game.add.text(300, 600, 'Game over. Press spacebar to restart.', { fontSize: '64px', fill: '#fff'});
+		this.gameOverText = this.game.add.text(0, 550, 'Game over. Click to restart.', { fontSize: '110px', fill: '#fff'});
 
 	}, 
 	
 	update: function() {
 		this.spaceKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 		
-		if (this.spaceKey.isDown) {
+		if (this.game.input.activePointer.isDown) {
            this.state.start('Game');
         }
 	}
