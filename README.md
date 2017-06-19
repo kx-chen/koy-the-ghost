@@ -11,8 +11,6 @@ enjoy
 - [ ] Play a sound when life is lost
 - [ ] Re-do enemy spawning
 - [ ] Re-do star spawning
-
-
 - [x] <strike> Add world boundaries </strike>
 - [x] <strike> Space out enemies more </strike>
 - [x] <strike> Add lives </strike> 
