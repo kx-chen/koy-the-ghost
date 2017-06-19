@@ -6,7 +6,8 @@ unitGame.Boot = function () {}
 unitGame.Boot.prototype = {
   preload: function () {
     // assets we'll use in the loading screen
-
+    this.loadingText = this.game.add.text(400, 16, 'hello. your game is loading. \n loading..... ', {fontSize: '32px', fill: '#fff'})
+    this.loadingText.fixedToCamera = true
   },
   create: function () {
     this.game.world.setBounds(0, 0, 500000, this.game.height)
