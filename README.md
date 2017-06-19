@@ -6,6 +6,14 @@ Website coming sooooooooooooooon. For now, check out the game in beta: https://b
 
 enjoy
 
+## controls
+
+spacebar to jump
+arrow keys to jump
+
+
+
+
 ## to-do list
 - [ ] make the ghost flash when a life is lost
 - [ ] Play a sound when life is lost
