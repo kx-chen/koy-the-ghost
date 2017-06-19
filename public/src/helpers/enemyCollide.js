@@ -13,7 +13,7 @@ unitGame.Game.prototype.enemyCollide = function () {
       this.player.tint = 0xff0000
       
       var that = this
-      setTimeout(function () {that.stopped = false; }, 3000)
+      setTimeout(function () {that.stopped = false; }, 1000)
     }
 
     // TODO: add function to change score text
