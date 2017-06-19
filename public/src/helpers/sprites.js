@@ -3,7 +3,7 @@ var unitGame = unitGame || {}
 unitGame.Game.prototype.addSprites = function () {
   this.sky = this.game.add.tileSprite(0, 0, 1500000, 1500000, 'sky')
 
-        // Adds in player
+  // Adds in player
   this.player = this.game.add.sprite(32, 125, 'dude')
   this.player.scale.setTo(2, 2)
   this.player.enableBody = true

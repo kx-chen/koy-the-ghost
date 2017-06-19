@@ -9,7 +9,7 @@ unitGame.Preload.prototype = {
     // Loading text
     this.loadingText = this.game.add.text(400, 16, 'loading... ', {fontSize: '200px', fill: '#fff'})
     this.loadingText.fixedToCamera = true
-    
+
     var assetsPath = '../assets/'
 
     this.game.load.image('sky', assetsPath + 'background.png')
