@@ -10,11 +10,19 @@ unitGame.Game.prototype.enemyCollide = function () {
     this.lives -= 1
     this.livesText.text = 'Lives: ' + this.lives
 
-    // Out of lives
-    if (this.lives === 0) {
+
+
+
+  checkIfOutOfLives.call(this, this.lives);
+    
+  }
+}
+
+function checkIfOutOfLives (lives) {
+  if (lives === 0) {
       this.soundtrack1.stop()
+      
       // Pass in score to gameover screen
       this.state.start('Gameover', true, false, this.score)
     }
-  }
 }

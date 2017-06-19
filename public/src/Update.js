@@ -12,7 +12,7 @@ unitGame.Game.prototype.update = function () {
 
   if (this.cursors.right.isDown) {
     this.player.body.velocity.x = 150
-    this.sky.tilePosition.x -= 3
+
   }
 
   if (this.cursors.up.isDown) {
@@ -24,7 +24,7 @@ unitGame.Game.prototype.update = function () {
   }
 
   this.camera.follow(this.player)
-  this.player.body.velocity.x = 500
+  // this.player.body.velocity.x = 500
 
   this.score += 0.5
   this.scoreText.text = 'Score: ' + Math.round(this.score)
