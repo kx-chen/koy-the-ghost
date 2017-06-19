@@ -12,7 +12,7 @@ enjoy
 - [ ] Re-do enemy spawning
 - [ ] Re-do star spawning
 - [x] <strike> Add world boundaries </strike>
-- [x] ~~Space out enemies more
+- [x] Space out enemies more
 - [x] Add lives
 - [x] Decrease lives when hit
 - [x] Score increases through time, not stars
@@ -20,7 +20,7 @@ enjoy
 - [x] Implement soundtrack
 - [x] Add "lives: " text
 - [x] Randomize ghost spawning
-- [x] Make the stars a life pack ~~
+- [x] Make the stars a life pack 
 
 
 ## credits
