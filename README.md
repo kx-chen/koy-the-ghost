@@ -6,6 +6,22 @@ Website coming sooooooooooooooon. For now, check out the game in beta: https://b
 
 enjoy
 
+## to-do list
+- [ ] make the ghost flash when a life is lost
+- [ ] Play a sound when life is lost
+- [ ] Re-do enemy spawning
+- [ ] Re-do star spawning
+- [x] Add world boundaries
+- [x] Space out enemies more
+- [x] Add lives
+- [x] Decrease lives when hit
+- [x] Score increases through time, not stars
+- [x] Add gameover screen
+- [x] Implement soundtrack
+- [x] Add "lives: " text
+- [x] Randomize ghost spawning
+- [x] Make the stars a life pack
+
 
 ## credits
 
