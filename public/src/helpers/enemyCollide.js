@@ -7,14 +7,16 @@ unitGame.Game.prototype.enemyCollide = function () {
         // wait 1 second
     this.timeDelay = this.game.time.now + 1000
 
-        // TODO: add function to change score text
+      // TODO: add function to change score text
 	    this.scoreText.text = 'Score: ' + this.score
 	    this.lives -= 1
 	    this.livesText.text = 'Lives: ' + this.lives
 
+        // Out of lives
 		    if (this.lives == 0) {
 			    this.soundtrack1.stop()
-			    this.state.start('Gameover')
+			    // Pass in score to gameover screen
+			    this.state.start('Gameover', true, false, this.score)
     }
   }
 }

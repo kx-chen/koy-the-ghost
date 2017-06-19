@@ -5,12 +5,17 @@ var unitGame = unitGame || {}
 unitGame.Gameover = function () {}
 
 unitGame.Gameover.prototype = {
+  init: function (score) {
+    // lol
+    this.score = score
+  },
+  
   preload: function () {
     console.log('lol you died')
   },
 
   create: function () {
-    this.gameOverText = this.game.add.text(0, 550, 'Game over. Click to restart.', { fontSize: '110px', fill: '#fff'})
+    this.gameOverText = this.game.add.text(0, 550, 'Game over. Click to restart. \n Score: ' + this.score, { fontSize: '110px', fill: '#fff'})
   },
 
   update: function () {

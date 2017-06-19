@@ -8,7 +8,7 @@ unitGame.Game.prototype.create = function () {
 
         // Start game off with 0 score and 3 lives
   this.score = 0
-  this.lives = 6
+  this.lives = 1
 
         // adds in sprites from the loader
   this.addSprites()
